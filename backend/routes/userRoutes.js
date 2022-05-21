@@ -1,11 +1,12 @@
 const express = require('express')
 const router = express.Router()
 const {getUser, userDeposit, userWithdraw} = require('../controllers/userController')
+const {protect} = require('../middleware/authMiddleware')
 
-router.get('/:id', getUser)
+router.get('/', protect, getUser)
 
-router.put('/:id/deposit/:amount', userDeposit)
+router.put('/deposit/:amount', userDeposit)
 
-router.put('/:id/withdraw/:amount', userWithdraw)
+router.put('/withdraw/:amount', userWithdraw)
 
 module.exports = router
