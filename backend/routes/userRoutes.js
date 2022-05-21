@@ -5,8 +5,8 @@ const {protect} = require('../middleware/authMiddleware')
 
 router.get('/', protect, getUser)
 
-router.put('/deposit/:amount', userDeposit)
+router.put('/deposit/', protect, userDeposit)
 
-router.put('/withdraw/:amount', userWithdraw)
+router.put('/withdraw/', protect, userWithdraw)
 
 module.exports = router
