@@ -14,7 +14,7 @@ function Header() {
           </Link>
         </li>
         <li>
-          <Link to="/createaccount">
+          <Link to="/register">
             <FaUser /> Create Account
           </Link>
         </li>

@@ -1,8 +1,6 @@
 const asyncHandler = require('express-async-handler')
 
 const User = require('../models/userModel')
-const Withdraw = require('../models/withdrawModel')
-const Deposit = require('../models/depositModel')
 
 // @desc    Get all of user's data
 // @route   GET /api/user/:id

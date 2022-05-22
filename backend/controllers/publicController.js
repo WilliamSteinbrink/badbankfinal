@@ -61,7 +61,6 @@ const createAccount = asyncHandler(async (req, res) => {
     email,
     password: hashedPassword,
     balance: 0,
-    token: generateToken(user._id)
   })
 
   if(user) {
@@ -69,6 +68,7 @@ const createAccount = asyncHandler(async (req, res) => {
       _id: user.id,
       name: user.name,
       email: user.email,
+      token: generateToken(user._id)
     })
   } else {
     res.status(400)
